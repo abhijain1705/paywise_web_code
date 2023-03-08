@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logobar {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  position: relative;
+}
+
+.logobar h3 {
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+}
+
+.logobar img {
+  width: 70px;
+}
+
+.download {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.download a {
+  text-decoration: none;
+  color: black;
+}
+
+.download:hover {
+  opacity: 0.8;
+}
+
+.contentParent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 1042px) {
+  .contentParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contentSubParent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.note pre {
+  white-space: pre-line;
+  max-width: 500px;
+  padding-left: 40px;
+  margin-top: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  display: flex;
+  margin: 0px auto;
+  flex-direction: column;
+  margin-top: 100px;
+  padding-left: 40px;
+  width: 100%;
+  height: max-content;
+}
+
+.content h1 {
+  white-space: pre-line;
+}
+
+.content h1, .content p {
+  margin: 0px;
+}
+
+.imageParent {
+  max-width: 400px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.imageParent img {
+  width: 300px;
+  height: 600px;
 }
